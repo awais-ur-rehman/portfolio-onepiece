@@ -1,6 +1,6 @@
 # portfolio-onepiece
 
-A neutral Next.js portfolio scaffold for Awais ur Rehman. The theme and portfolio content will be defined later.
+A locally implemented portfolio for Awais ur Rehman, following the visual and interaction direction of [Nesil Noble’s portfolio](https://nesilnoble.com/). It includes an inset stage, original articulated character, grain and stars, eight colour-changing chapters, a horizontal project gallery, six case studies, and a complete résumé. The earlier One Piece implementation has been removed. See [the rebuild brief](docs/rebuild.md).
 
 ## Getting started
 
@@ -15,7 +15,7 @@ Open http://localhost:3000. No environment variables or external services are re
 
 ## Stack and structure
 
-Next.js App Router, React, strict TypeScript, Tailwind CSS, ESLint, and Prettier. Commit the lockfile and use `npm ci` for repeatable installs.
+Next.js App Router, React, strict TypeScript, Tailwind CSS, Lenis, GSAP, ESLint, and Prettier. Commit the lockfile and use `npm ci` for repeatable installs. There are no runtime calls to the reference website, embeds, remote fonts, or remote images.
 
 ```text
 public/images/       Static image assets
@@ -69,4 +69,6 @@ The `private: true` setting in package.json prevents accidental npm publication;
 
 ## Next steps
 
-Supply the theme, sections, and assets before implementing the visual design. No CMS, authentication, database, analytics, or animation dependencies are included yet.
+Edit `src/content/portfolio.ts` to change project and résumé information. `src/features/dreams/dream-portfolio.tsx` contains the chapters; `use-dream-scroll.ts` owns scrolling and scene lifecycle; `character.tsx` contains the original vector character. `node scripts/create-project-art.mjs` regenerates the six original SVG covers. These illustrations communicate the project concepts and are not product screenshots.
+
+Big Shoulders and Italiana are self-hosted under their included OFL licences. Italiana replaces the reference’s commercially licensed title face. Sound is an opt-in, locally synthesized ambient chord. Narrow screens and reduced-motion preferences use a native vertical reading layout with every project accessible. The résumé is print styled for saving as PDF. The erroneous master’s qualification is excluded. No CMS, authentication, database, or analytics is included.
